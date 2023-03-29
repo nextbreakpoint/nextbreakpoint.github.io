@@ -1,14 +1,30 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="description" content="Projects and articles by Andrea Medeghini">
-		<meta name="keywords" content="software">
-		<meta name="author" content="Andrea Medeghini">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>NextBreakpoint</title>
-	</head>
-	<body>
-    <p>HelloK</p>
-  </body>
-</html>
+---
+layout: page
+title: NextBreakpoint
+description: Free Software by Andrea Medeghini
+keywords: software,medeghini
+youtube_player: true
+---
+<div class="card">
+  <h1 class="title-without-icon"><a href="https://github.com/nextbreakpoint/flink-k8s-toolbox">Kubernetes Operator for Flink</a></h1>
+  <div class="content">
+{% capture flinkctl %}{% include markdown/summary-kubernetes-operator-for-flink.md %}{% endcapture %}
+{{ flinkctl | markdownify }}
+  </div>
+  <div class="actions">
+    <a class="link" href="https://github.com/nextbreakpoint/flink-k8s-toolbox">See project on GitHub</a>
+  </div>
+</div>
+<div class="card">
+  <h1 class="title-without-icon"><a href="https://github.com/nextbreakpoint/nextfractal">Discover the beauty of Chaos</a></h1>
+  <div class="content">
+{% capture nextfractal %}{% include markdown/summary-discover-the-beauty-of-chaos.md %}{% endcapture %}
+{{ nextfractal | markdownify }}
+  </div>
+  <div class="video">
+    <div id="ytplayer"><img src="{{site.images_url}}/nextfractal/screenshot-3.png" alt="Screen shot showing NextFractal"/></div>
+  </div>
+  <div class="actions">
+    <a class="link" href="https://github.com/nextbreakpoint/nextfractal">See project on GitHub</a>
+  </div>
+</div>

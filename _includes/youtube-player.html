@@ -1,0 +1,60 @@
+<script>
+var addOnLoad = function(callback) {
+  if (window.attachEvent) {
+      window.attachEvent('onload', callback);
+  } else {
+      if (window.onload) {
+          var curronload = window.onload;
+          var newonload = function(evt) {
+              curronload(evt);
+              callback(evt);
+          };
+          window.onload = newonload;
+      } else {
+          window.onload = callback;
+      }
+  }
+};
+var addEvent = function(object, type, callback) {
+  if (object == null || typeof(object) == 'undefined') return;
+  if (object.addEventListener) {
+      object.addEventListener(type, callback, false);
+  } else if (object.attachEvent) {
+      object.attachEvent("on" + type, callback);
+  } else {
+      object["on"+type] = callback;
+  }
+};
+var videoId = 'uU1p7u-B2Kg';
+var player;
+function videoSetSize() {
+var video = document.getElementById("ytplayer");
+var width = window.getComputedStyle(video).width;
+width = Math.round(width.substring(0, width.length - 2));
+var height = Math.round(width * (1080 / 1920));
+if (!player) {
+  player = new YT.Player('ytplayer', {
+    height: height + "px",
+    width: width + "px",
+    playerVars: {
+      rel: 0
+    },
+    videoId: videoId
+  });
+} else {
+  var ytplayer = document.getElementById("ytplayer");
+  ytplayer.setAttribute("width", width + "px");
+  ytplayer.setAttribute("height", height + "px");
+}
+}
+function onYouTubeIframeAPIReady() {
+videoSetSize();
+}
+addOnLoad(function() {
+  var resizeId;
+  addEvent(window, "resize", function(event) {
+      clearTimeout(resizeId);
+      resizeId = setTimeout(videoSetSize, 500);
+  });
+});
+</script>

@@ -1,0 +1,8 @@
+content_url: https://nextbreakpoint.github.io
+images_url: https://images.nextbreakpoint.com
+plugins:
+  - jekyll-sitemap
+exclude:
+  - README.md
+sass:
+  style: compressed

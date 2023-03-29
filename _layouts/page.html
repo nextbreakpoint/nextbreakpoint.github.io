@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="{{page.description}}">
+		<meta name="keywords" content="{{page.keywords}}">
+		<meta name="author" content="Andrea Medeghini">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta property="og:url" content="{{site.content_url}}">
+		<meta property="og:title" content="{{page.title}}">
+		<meta property="og:description" content="{{page.description}}">
+		<meta property="og:site_name" content="NextBreakpoint">
+		<link rel="canonical" href="{{site.content_url}}" />
+{% include favicon.html %}
+		<style>
+{% capture inlinecss %}{% include main.scss %}{% endcapture %}
+{{ inlinecss | scssify }}
+		</style>
+		<title>{{page.title}}</title>
+		{% if page.youtube_player %}
+		<script src="https://www.youtube.com/player_api"></script>
+		{% endif %}
+	</head>
+	<body class="home">
+		<header>
+			<div class="title">NextBreakpoint</div>
+		</header>
+{{content}}
+		<footer>
+{% include copyright.html %}
+		</footer>
+	</body>
+{% if page.youtube_player %}
+{% include youtube-player.html %}
+{% endif %}
+</html>
