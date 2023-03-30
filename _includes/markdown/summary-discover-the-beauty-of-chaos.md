@@ -2,6 +2,4 @@ NextFractal is an application for creating fractals and other algorithmically ge
 
 NextFractal is currently able to interpret two scripting languages: Mandelbrot and CFDG. Mandelbrot is a domain specific language for creating images of the Mandelbrot set and its variants (the Julia and Fatou sets). CFDG is a context-free grammar for creating images by an iterative process.
 
-You don't need to learn the scripting language to enjoy the examples provided with NextFractal, but if you do, then it is a lot of fun creating your own fractals. The only limit is your imagination.
-
-Don't worry, we have created a Wiki to help you, with a tutorial for the scripting language and examples of scripts.
+You don't need to learn the scripting language to enjoy the examples provided with NextFractal, but if you do, then it is a lot of fun creating your own fractals. But don't worry, we have created a Wiki to help you, with a tutorial for the scripting language and examples of scripts. The only limit is your imagination.
